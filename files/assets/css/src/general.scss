@@ -1,0 +1,32 @@
+@import 'variables';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.3em;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: $smartphone) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+@import 'header';
+@import 'footer';
+@import 'main';
+@import 'menu';

@@ -1,0 +1,17 @@
+{
+  "name": "cocreation-contao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.4.1"
+  },
+  "dependencies": {
+    "grunt-contrib-sass": "^2.0.0"
+  }
+}

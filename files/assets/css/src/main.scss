@@ -1,0 +1,468 @@
+@import "variables";
+
+
+.mod_article {
+  height: 100vh;
+  .article-inner {
+    display: flex;
+    height: 100%;
+    > * {
+      align-self: center;
+    }
+    .ce_image.fill-half {
+      height: 100%;
+      figure {
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .ce_image.left:not(.fill-half) {
+      img {
+        max-width: 80%;
+        float: right;
+        margin-right: 100px;
+      }
+    }
+    .ce_image.right:not(.fill-half) {
+      img {
+        max-width: 80%;
+        float: left;
+        margin-left: 100px;
+      }
+    }
+  }
+}
+
+.left {
+  float: left;
+  width: 50%;
+  &.ce_text .text-inner {
+    max-width: 500px;
+    float: right;
+    margin-right: 100px;
+  }
+}
+
+.right {
+  float: right;
+  width: 50%;
+  &.ce_text .text-inner {
+    max-width: 500px;
+    float: left;
+    margin-left: 100px;
+  }
+}
+
+h2 {
+  color: $headline-color;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.ce_text,#footer nav {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      position: relative;
+      margin: 6px 0;
+      padding-left: 15px;
+      font-size: 19px;
+      &:before {
+        position: absolute;
+        content: '\00bb';
+        left: 0;
+        top: -5px;
+        font-size: 22px;
+        color: $primary-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+#unsere-dna {
+  overflow: visible;
+  position: relative;
+  background: linear-gradient(315deg, #338599a8, #73abbab0);
+  .ce_text {
+    color: white;
+    h2 {
+      color: white;
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -10vw;
+    right: 0;
+    background: url("../layout/unsere-dna.svg") no-repeat 100%/contain;
+    width: 50vw;
+    height: 50vh;
+    z-index: 100;
+  }
+}
+
+#prozessbegleitung {
+  overflow: visible;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -10vw;
+    left: 0;
+    background: url("../layout/prozessbegleitung.svg") no-repeat 0/contain;
+    width: 50vw;
+    height: 50vh;
+    z-index: 100;
+  }
+}
+
+#coaching {
+  background-image: linear-gradient(135deg, $headline-color, $primary-color);
+  overflow: visible;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -10vw;
+    right: 0;
+    background: url("../layout/coaching.svg") no-repeat 100%/contain;
+    width: 50vw;
+    height: 50vh;
+    z-index: 100;
+  }
+  .ce_text {
+    color: white;
+    h2 {
+      color: white;
+    }
+  }
+}
+
+#konzeptentwicklung {
+  background-image: linear-gradient(135deg, $headline-color, $primary-color);
+  .ce_text {
+    color: white;
+    h2 {
+      color: white;
+    }
+  }
+}
+
+#konzeptentwicklung-3.mod_article {
+  height: 50vh;
+}
+
+#partner {
+  height: auto;
+  .ce_text {
+    align-self: flex-end;
+  }
+  h2 {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .partner-logos {
+    background-image: linear-gradient(135deg, $headline-color, $primary-color);
+    .partner-logos-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      padding: 90px 0;
+      box-sizing: border-box;
+      a {
+        display: block;
+        width: 16%;
+        height: 100px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-self: center;
+        img {
+          height: 100%;
+          filter: brightness(0) invert(1);
+          transition: filter 450ms;
+          &:hover {
+            filter: brightness(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.to-top-button {
+  position: fixed;
+  bottom: 4vw;
+  right: 4vw;
+  z-index: 100;
+  width: 100px;
+  transition: transform 250ms;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.fading.activated {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 500ms cubic-bezier(.33,.28,.31,.81), opacity 500ms cubic-bezier(.33,.28,.31,.81);
+  ul li {
+    opacity: 0;
+    transition: opacity 500ms;
+    &:first-child {
+      transition-delay: 200ms;
+    }
+    &:nth-child(2) {
+      transition-delay: 400ms;
+    }
+    &:nth-child(3) {
+      transition-delay: 600ms;
+    }
+    &:nth-child(4) {
+      transition-delay: 800ms;
+    }
+    &:nth-child(5) {
+      transition-delay: 1000ms;
+    }
+    &:nth-child(6) {
+      transition-delay: 1200ms;
+    }
+    &:nth-child(7) {
+      transition-delay: 1400ms;
+    }
+    &:nth-child(8) {
+      transition-delay: 1600ms;
+    }
+    &:nth-child(9) {
+      transition-delay: 1800ms;
+    }
+    &:nth-child(10) {
+      transition-delay: 2000ms;
+    }
+    &:nth-child(11) {
+      transition-delay: 2200ms;
+    }
+    &:nth-child(12) {
+      transition-delay: 2400ms;
+    }
+  }
+}
+
+.faded.activated {
+  transform: translateY(0);
+  opacity: 1;
+  ul li {
+    opacity: 1;
+  }
+}
+
+.sticky-contact {
+  position: fixed;
+  top: 50%;
+  right: -230px;
+  transform: translateY(-50%);
+  z-index: 300;
+  > div {
+    position: relative;
+    width: 280px;
+    right: 0;
+    padding: 20px;
+    margin: 7px 0;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    transition: right 250ms;
+    background-color: $secondary-color;
+    &:hover {
+      right: 230px;
+    }
+    .text-inner p a {
+      padding-left: 80px;
+      color: white;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 800;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 28px;
+        left: 21px;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &:first-child {
+      .text-inner p a:before {
+        background-image: url("../layout/phone.svg");
+      }
+    }
+    &:nth-child(2) {
+      .text-inner p a:before {
+        background-image: url("../layout/mail.svg");
+      }
+    }
+    &:last-child {
+      .text-inner p a:before {
+        background-image: url("../layout/locator.svg");
+      }
+    }
+  }
+}
+
+#imprint,#privacy,#form-sent {
+  height: 600px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  h1 {
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    transition: color 250ms;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.subpage {
+  #header {
+    .page-headline {
+      display: none;
+    }
+    .header-image {
+      padding-bottom: 50vh;
+    }
+  }
+  .footer-border-image {
+    display: none;
+  }
+}
+
+.mod_article#privacy {
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#co-creation-chart img {
+  max-width: initial;
+  margin-left: 0;
+}
+
+@media screen and (max-width: $laptop) {
+  .sticky-contact > div .text-inner p a::before {
+    top: 25px;
+    left: 23px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .sticky-contact > div {
+    width: 290px;
+    padding: 8px;
+  }
+
+  .to-top-button {
+    width: 65px;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  .mod_article {
+    height: auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    &.colored-background {
+      padding-bottom: 0;
+    }
+    .article-inner {
+      display: block;
+    }
+    &.reverse-order .article-inner {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  #konzeptentwicklung-3.mod_article,#partner.mod_article {
+    height: auto;
+  }
+
+  .left.ce_text .text-inner {
+    max-width: initial;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .right.ce_text .text-inner {
+    max-width: initial;
+    float: none;
+    margin: 0;
+  }
+
+  .left {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .right {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .mod_article .article-inner .ce_image.fill-half {
+    width: 100%;
+    figure {
+      margin-bottom: -6px;
+    }
+  }
+
+  .mod_article .article-inner .ce_image {
+    margin-top: 35px;
+  }
+
+  .mod_article .article-inner .ce_image.right:not(.fill-half) img {
+    max-width: initial;
+    float: none;
+    margin-left: 0;
+  }
+
+  .mod_article .article-inner .ce_image.left:not(.fill-half) img {
+    max-width:initial;
+    float:none;
+    margin-right:0;
+  }
+
+  #prozessbegleitung:after, #coaching:after {
+    background:none;
+  }
+
+  #partner {
+    padding-bottom: 0;
+    .partner-logos .partner-logos-inner {
+      flex-wrap: wrap;
+      a {
+        width: 47%;
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .mod_article#privacy {
+    margin-top: 0;
+  }
+}
